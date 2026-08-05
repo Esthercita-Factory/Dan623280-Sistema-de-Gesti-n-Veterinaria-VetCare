@@ -11,8 +11,10 @@ do
     User_Menu.Menu();
 
     Validation_menu v = new Validation_menu();
-
-int opcion = Convert.ToInt32(Console.ReadLine());
+    
+    
+    Console.Write("Colocar opcion: ");
+    int opcion = ConsolaInput.PedirEntero("Opcion: ",0,120);
 
     switch (opcion)
     {
@@ -23,9 +25,16 @@ int opcion = Convert.ToInt32(Console.ReadLine());
             v.Mostrar();
             break;
         case 3:
-            
+            v.Buscar();
             break;
         case 4:
+            v.Eliminar();
+            break;
+        case 5:
+            v.Actualizar();
+            break;
+        case 6:
+            salir = false;
             User_mensajes.Mensajes("Salida");
             break;
         default:
