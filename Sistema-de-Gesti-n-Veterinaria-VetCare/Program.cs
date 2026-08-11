@@ -8,9 +8,9 @@ bool salir = true;
 do
 {
 
-    User_Menu.Menu();
+    User_Menu_M.Menu_M_Principal();
 
-    Validation_menu v = new Validation_menu();
+    Validation_menu_p v = new Validation_menu_p();
     
     
     Console.Write("Colocar opcion: ");

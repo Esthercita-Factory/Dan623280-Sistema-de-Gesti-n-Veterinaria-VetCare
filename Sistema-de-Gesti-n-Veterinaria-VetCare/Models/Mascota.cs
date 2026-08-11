@@ -1,6 +1,6 @@
 namespace Sistema_de_Gesti_n_Veterinaria_VetCare.Models;
 
-public class Paciente
+public class Mascota
 {
     
     public string Id { get; set; }
@@ -8,7 +8,7 @@ public class Paciente
     public int Edad { get; set; }
     public string Sintoma { get; set; }
 
-    public Paciente(string nombre, int edad, string sintoma)
+    public Mascota(string nombre, int edad, string sintoma)
     {
         Id = Guid.NewGuid().ToString();
         Nombre = nombre;

@@ -3,14 +3,14 @@ using Sistema_de_Gesti_n_Veterinaria_VetCare.Repository;
 
 namespace Sistema_de_Gesti_n_Veterinaria_VetCare.UI;
 
-public class Validation_menu
+public class Validation_menu_p
 {
     public void Registrar()
     {
         string nombre = ConsolaInput.PedirTexto("Nombre: ");
         int edad = ConsolaInput.PedirEntero("Edad: ",0,120);
         string sintoma = ConsolaInput.PedirTexto("Sintoma: ");
-        Paciente p = new Paciente(nombre, edad, sintoma);
+        Mascota p = new Mascota(nombre, edad, sintoma);
         
         PacienteRepository.Guardar(p);
         User_mensajes.Mensajes("Añadidos");
@@ -19,7 +19,7 @@ public class Validation_menu
     public void Mostrar()
     {
         Console.WriteLine("==============Datos de Pacientes=============");
-        foreach (Paciente paciente in PacienteRepository.ObtenerPacientes())
+        foreach (Mascota paciente in PacienteRepository.ObtenerPacientes())
         {
             Console.WriteLine("----------------------------------------");
             Console.WriteLine("id: "+paciente.Id);
@@ -34,7 +34,7 @@ public class Validation_menu
     public void Buscar()
     {
         string nombre = ConsolaInput.PedirTexto("Nombre: ");
-        Paciente pacienteencontrado  =  PacienteRepository.BuscarPorNombre(nombre);
+        Mascota pacienteencontrado  =  PacienteRepository.BuscarPorNombre(nombre);
 
         if (pacienteencontrado != null)
         {
@@ -54,7 +54,7 @@ public class Validation_menu
     public void Buscarid()
     {
         string id = ConsolaInput.PedirTexto("Id: ");
-        Paciente pacienteencontrado  =  PacienteRepository.BuscarPorId(id);
+        Mascota pacienteencontrado  =  PacienteRepository.BuscarPorId(id);
 
         if (pacienteencontrado != null)
         {
@@ -73,7 +73,7 @@ public class Validation_menu
     public void Eliminar()
     {
         string id = ConsolaInput.PedirTexto("Id: ");
-        Paciente pacienteencontrado  =  PacienteRepository.BuscarPorId(id);
+        Mascota pacienteencontrado  =  PacienteRepository.BuscarPorId(id);
 
         if (pacienteencontrado != null)
         {
@@ -96,7 +96,7 @@ public class Validation_menu
     public void Actualizar()
     {
         string id = ConsolaInput.PedirTexto("Id: ");
-        Paciente pacienteencontrado  =  PacienteRepository.BuscarPorId(id);
+        Mascota pacienteencontrado  =  PacienteRepository.BuscarPorId(id);
 
         if (pacienteencontrado != null)
         {

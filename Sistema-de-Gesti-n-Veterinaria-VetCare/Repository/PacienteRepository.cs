@@ -5,19 +5,19 @@ namespace Sistema_de_Gesti_n_Veterinaria_VetCare.Repository;
 public class PacienteRepository
 {
     
-    public static List<Paciente> _pacientes = new List<Paciente>();
+    public static List<Mascota> _pacientes = new List<Mascota>();
 
-    public static void Guardar(Paciente paciente)
+    public static void Guardar(Mascota mascota)
     {
-        _pacientes.Add(paciente);
+        _pacientes.Add(mascota);
     }
 
-    public static List<Paciente> ObtenerPacientes()
+    public static List<Mascota> ObtenerPacientes()
     {
         return _pacientes;
     }
 
-    public static Paciente BuscarPorNombre(string nombre)
+    public static Mascota BuscarPorNombre(string nombre)
     {
         foreach (var paciente_unico in _pacientes)
         {
@@ -29,7 +29,7 @@ public class PacienteRepository
         }
         return null;
     }
-    public static Paciente BuscarPorId(string id)
+    public static Mascota BuscarPorId(string id)
     {
         foreach (var paciente_unico in _pacientes)
         {
@@ -41,9 +41,9 @@ public class PacienteRepository
         }
         return null;
     }
-    public static void Eliminar(Paciente paciente)
+    public static void Eliminar(Mascota mascota)
     {
-        _pacientes.Remove(paciente);
+        _pacientes.Remove(mascota);
 
     }
     
