@@ -1,13 +1,26 @@
+using Sistema_de_Gesti_n_Veterinaria_VetCare.Interfacez;
+
 namespace Sistema_de_Gesti_n_Veterinaria_VetCare.Models;
 
-public class Dueño
+public class Dueño : IDueño
 {
-    public string Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
     public string Nombre { get; set; }
     
-    public Dueño(string nombre, int edad, string sintoma)
+    public int Edad { get; set; }
+    
+    public string Telefono { get; set; }
+
+    public static  List<Dueño> _dueño = new List<Dueño>();
+  
+    
+    public Dueño(string nombre, int edad, string telefono)
     {
-        Id = Guid.NewGuid().ToString();
         Nombre = nombre;
+        Edad = edad;
+        Telefono = telefono;
     }
+    
+    
+    
 }
