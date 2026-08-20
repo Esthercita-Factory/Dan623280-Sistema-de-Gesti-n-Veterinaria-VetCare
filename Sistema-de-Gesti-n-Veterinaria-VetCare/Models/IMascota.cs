@@ -8,6 +8,4 @@ public interface IMascota
     public string Raza { get; set; }
     public string Sintoma { get; set; }
     
-    public Guid DueñoId { get; set; }
-
 }

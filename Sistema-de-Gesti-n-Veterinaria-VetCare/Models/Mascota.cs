@@ -10,8 +10,6 @@ public class Mascota : IMascota
     public int Edad { get; set; }
     public string Raza { get; set; }
     public string Sintoma { get; set; }
-    public Guid DueñoId { get; set; }
-
     public Dueño Dueño { get; set; }
     
     public static  List<Mascota> _mascota = new List<Mascota>();

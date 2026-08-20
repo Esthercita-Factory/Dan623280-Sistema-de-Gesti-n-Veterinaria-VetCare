@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Sistemadealquilerdevehículos.Services;
 
-public class InputDate
+public class ConsolaInput
 {
     public static int PedirEntero(string mensaje, int min = int.MinValue, int max = int.MaxValue)
     {
@@ -77,18 +77,13 @@ public class InputDate
         }
     }
     
-    public static Guid? PedirGuid(string mensaje)
+    public static Guid PedirGuid(string mensaje)
     {
         while (true)
         {
             Console.Write($"{mensaje} ");
             string entrada = Console.ReadLine()?.Trim();
-
-            if (entrada == "0")
-            {
-                return null;
-            }
-
+            
             if (Guid.TryParse(entrada, out Guid id) && id != Guid.Empty)
             {
                 return id;
@@ -98,17 +93,14 @@ public class InputDate
         }
     }
     
-    public static DateTime? PedirFecha(string mensaje)
+    public static DateTime PedirFecha(string mensaje)
     {
         while (true)
         {
             Console.Write($"{mensaje} ");
             string entrada = Console.ReadLine()?.Trim();
 
-            if (entrada == "0")
-            {
-                return null;
-            }
+            
             if (DateTime.TryParseExact(
                     entrada,
                     "dd/MM/yyyy",

@@ -7,39 +7,7 @@ bool salir = true;
 
 do
 {
+    Menu.MenuPrincipal();
+    salir = Opciones.opcion();
 
-    User_Menu_M.Menu_M_Principal();
-
-    Validation_menu_p v = new Validation_menu_p();
-    
-    
-    Console.Write("Colocar opcion: ");
-    int opcion = ConsolaInput.PedirEntero("Opcion: ",0,120);
-
-    switch (opcion)
-    {
-        case 1:
-            v.Registrar();
-            break;
-        case 2:
-            v.Mostrar();
-            break;
-        case 3:
-            v.Buscar();
-            break;
-        case 4:
-            v.Eliminar();
-            break;
-        case 5:
-            v.Actualizar();
-            break;
-        case 6:
-            salir = false;
-            User_mensajes.Mensajes("Salida");
-            break;
-        default:
-            User_mensajes.Mensajes("no valido");
-            break;
-    }
-    
 } while (salir);
