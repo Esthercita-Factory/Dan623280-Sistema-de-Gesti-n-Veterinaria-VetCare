@@ -16,6 +16,15 @@ public class ServiceVerifiDueños
         RepositoryDueño.Agregar(dueño1);
         return true;
     }
+
+    public static void ActuazliarDueño(Dueño dueño, string nombre, int edad, string telefono)
+    {
+        RepositoryDueño.Actualizar(dueño,nombre, edad, telefono);
+    }
+    public static void Eliminar(Dueño dueño)
+    {
+        RepositoryDueño.Eliminar(dueño);
+    }
     
     //Consultar 
     
@@ -24,6 +33,25 @@ public class ServiceVerifiDueños
     {
         return RepositoryDueño.BuscarPorId(id);
 
+    }
+    
+    // Nombre
+    public static List<Dueño> BuscarPorNombre(string nombre)
+    {
+        return RepositoryDueño.ConsultarNombre(nombre);
+
+    }
+    
+    //Edad
+    public static List<Dueño> BuscarPorEdad(int edad)
+    {
+        return RepositoryDueño.ConsultarEdad(edad);
+    }
+    
+    //Telefono
+    public static List<Dueño> BuscarPorTelefono(string telefono)
+    {
+        return RepositoryDueño.ConsultarTelefono(telefono);
     }
     
 }

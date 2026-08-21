@@ -37,8 +37,8 @@ public class Ingresar
         int edad =  ConsolaInput.PedirEntero("Colocar Edad: ");
         string raza =  ConsolaInput.PedirTexto("Colocar Raza: ");
         string sintoma = ConsolaInput.PedirTexto("Colocar Sintoma: ");
-        
-        Mostrar.MostrarDueños();
+        List<Dueño> dueños = ServiceVerifiDueños.ObtenerTodos(); 
+        Mostrar.MostrarDueños(dueños);
         Guid iddueño = ConsolaInput.PedirGuid("Colocar id de dueño: ");
 
         Dueño dueño = ServiceVerifiDueños.BuscarPorId(iddueño);

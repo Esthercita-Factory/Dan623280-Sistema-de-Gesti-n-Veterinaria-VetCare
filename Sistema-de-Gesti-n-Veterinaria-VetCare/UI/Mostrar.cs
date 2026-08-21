@@ -27,9 +27,9 @@ public class Mostrar
         
     }
 
-    public static void MostrarDueños()
+    public static void MostrarDueños(List<Dueño> dueños)
     {
-        List<Dueño> dueños = ServiceVerifiDueños.ObtenerTodos(); 
+        
         if (dueños.Count == 0)
         {
             Console.WriteLine("===============================");
@@ -46,9 +46,9 @@ public class Mostrar
              
     }
 
-    public static void MostrarMascotas()
+    public static void MostrarMascotas(List<Mascota> mascotas)
     {
-        List<Mascota> mascotas = ServiceVerifiMascotas.ObtenerTodos();
+        
         if (mascotas.Count == 0)
         {
             Console.WriteLine("=================================");

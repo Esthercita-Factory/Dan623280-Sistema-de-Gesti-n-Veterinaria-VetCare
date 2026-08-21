@@ -21,7 +21,7 @@ public static class RepositoryDueño
     }
 
     //Actualizar
-    public static void Actualizar(this Dueño dueño, string nombre, int edad, string telefono)
+    public static void Actualizar(Dueño dueño, string nombre, int edad, string telefono)
     {
         dueño.Nombre = nombre;
         dueño.Edad = edad;
@@ -30,9 +30,9 @@ public static class RepositoryDueño
     }
 
     //Eliminar
-    public static void Eliminar(Mascota mascota)
+    public static void Eliminar(Dueño dueño)
     {
-        Mascota._mascota.Remove(mascota);
+        Dueño._dueño.Remove(dueño);
     }
     
     
